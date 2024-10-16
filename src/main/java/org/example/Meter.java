@@ -6,4 +6,9 @@ public class Meter {
     public Meter(double value) {
         this.value = value;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.value == ((Meter) obj).value;
+    }
 }
