@@ -15,10 +15,18 @@ public class MeterTest {
     }
 
     @Test
-    void shouldAssert1MetresIsEqualTo1000Metres() {
+    void shouldAssert1MetresIsNotEqualTo1000Metres() {
         Distance oneMeter = new Distance(1, "m");
         Distance thousandMeter = new Distance(1000, "m");
 
         assertNotEquals(oneMeter, thousandMeter);
+    }
+
+    @Test
+    void shouldAssert1KilometerMetresIsEqualTo1000Metres() {
+        Distance oneMeter = new Distance(1, "km");
+        Distance thousandMeter = new Distance(1000, "m");
+
+        assertEquals(oneMeter, thousandMeter);
     }
 }
