@@ -8,16 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class MeterTest {
     @Test
     void shouldAssert1000MetresIsEqualTo1000Metres() {
-        Meter thousandMeter = new Meter(1000);
-        Meter anotherThousandMeter = new Meter(1000);
+        Distance thousandMeter = new Distance(1000, "m");
+        Distance anotherThousandMeter = new Distance(1000, "m");
 
         assertEquals(thousandMeter, anotherThousandMeter);
     }
 
     @Test
     void shouldAssert1MetresIsEqualTo1000Metres() {
-        Meter oneMeter = new Meter(1);
-        Meter thousandMeter = new Meter(1000);
+        Distance oneMeter = new Distance(1, "m");
+        Distance thousandMeter = new Distance(1000, "m");
 
         assertNotEquals(oneMeter, thousandMeter);
     }
